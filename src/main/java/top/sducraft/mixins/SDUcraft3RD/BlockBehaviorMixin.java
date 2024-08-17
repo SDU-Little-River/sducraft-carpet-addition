@@ -1,4 +1,4 @@
-package top.sducraft.mixins.bds;
+package top.sducraft.mixins.SDUcraft3RD;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
