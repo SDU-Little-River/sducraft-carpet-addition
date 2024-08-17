@@ -1,6 +1,5 @@
 package top.sducraft.mixins.ais;
 
-
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -15,7 +14,6 @@ import top.sducraft.Settings;
 @Mixin(ArmorStand.class)
 
 public abstract class ArmorStandMixin extends LivingEntity{
-
 
     protected ArmorStandMixin(EntityType<? extends LivingEntity> entityType, Level level) {
         super(entityType, level);

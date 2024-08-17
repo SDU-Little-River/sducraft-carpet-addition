@@ -27,7 +27,6 @@ public abstract class CropBlockMixin extends BushBlock {
             cir.setReturnValue(super.canSurvive(blockState, levelReader, blockPos));
     }
 
-
     // 移除生长时光照判断
     @ModifyConstant(method = "randomTick",
             slice = @Slice(from = @At(value = "HEAD"), to = @At(value = "TAIL")),
