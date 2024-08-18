@@ -15,7 +15,7 @@ public abstract class FallingBlockMixin extends Block implements Fallable {
     public FallingBlockMixin(Properties properties) {
         super(properties);
     }
-
+//禁用掉落方块生成
     @Inject(method = "isFree",at=@At("HEAD"), cancellable = true)
     private static void isFree(BlockState blockState, CallbackInfoReturnable<Boolean> cir) {
         if(Settings.noFallingBlock){
