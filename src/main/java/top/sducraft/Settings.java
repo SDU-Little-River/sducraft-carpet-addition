@@ -14,12 +14,19 @@ public class Settings {
             categories = {sdu}
     )
     public static boolean brittleDeepSlate = false;
+
     @Rule(
             categories = {sdu}
     )
     public static boolean notebookIgnoreupdate = false;
+
     @Rule(
             categories = {sdu}
     )
     public static boolean noFallingBlock = false;
+
+    @Rule(
+            categories = {sdu}
+    )
+    public static boolean saplingPlaceIgnoreCondition = false;
 }
