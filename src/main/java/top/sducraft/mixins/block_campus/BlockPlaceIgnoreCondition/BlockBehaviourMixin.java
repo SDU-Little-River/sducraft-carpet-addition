@@ -1,4 +1,4 @@
-package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
+package top.sducraft.mixins.block_campus.BlockPlaceIgnoreCondition;
 
 import com.mojang.serialization.MapCodec;
 import it.unimi.dsi.fastutil.objects.Reference2ObjectArrayMap;

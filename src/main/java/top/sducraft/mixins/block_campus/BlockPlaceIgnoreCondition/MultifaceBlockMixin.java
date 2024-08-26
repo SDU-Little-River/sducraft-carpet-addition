@@ -1,4 +1,4 @@
-package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
+package top.sducraft.mixins.block_campus.BlockPlaceIgnoreCondition;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

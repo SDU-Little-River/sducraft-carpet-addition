@@ -1,14 +1,11 @@
-package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
+package top.sducraft.mixins.block_campus.BlockPlaceIgnoreCondition;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.KelpBlock;
 import net.minecraft.world.level.block.LiquidBlockContainer;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

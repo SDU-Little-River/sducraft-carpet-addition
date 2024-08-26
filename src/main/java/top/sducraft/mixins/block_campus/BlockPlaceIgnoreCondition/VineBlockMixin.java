@@ -1,8 +1,7 @@
-package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
+package top.sducraft.mixins.block_campus.BlockPlaceIgnoreCondition;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;

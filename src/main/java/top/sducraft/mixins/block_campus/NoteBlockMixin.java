@@ -1,4 +1,4 @@
-package top.sducraft.mixins.block_sdu;
+package top.sducraft.mixins.block_campus;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

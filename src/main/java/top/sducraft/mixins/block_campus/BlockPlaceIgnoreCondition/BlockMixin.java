@@ -1,11 +1,13 @@
-package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
+package top.sducraft.mixins.block_campus.BlockPlaceIgnoreCondition;
 
 import net.fabricmc.fabric.api.block.v1.FabricBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SupportType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,5 +24,13 @@ public abstract class BlockMixin extends BlockBehaviour implements ItemLike, Fab
         if(Settings.blockPlaceIgnoreCondition){
              cir.setReturnValue(true);
         }
-}
+    }
+
+    @Inject(method = "canSupportRigidBlock",at = @At("HEAD"), cancellable = true)
+    private static void canSupportRigidBlock(BlockGetter blockGetter, BlockPos blockPos, CallbackInfoReturnable<Boolean> cir) {
+        if(Settings.blockPlaceIgnoreCondition){
+            cir.setReturnValue(true);
+        }
+    }
+
 }

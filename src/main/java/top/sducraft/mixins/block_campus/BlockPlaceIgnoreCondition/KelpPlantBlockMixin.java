@@ -1,4 +1,4 @@
-package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
+package top.sducraft.mixins.block_campus.BlockPlaceIgnoreCondition;
 
 import net.minecraft.world.level.block.KelpPlantBlock;
 import net.minecraft.world.level.block.state.BlockState;

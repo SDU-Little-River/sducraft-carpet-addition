@@ -1,23 +1,24 @@
-package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
+package top.sducraft.mixins.block_campus.BlockPlaceIgnoreCondition;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.GrowingPlantBlock;
+import net.minecraft.world.level.block.SignBlock;
+import net.minecraft.world.level.block.StandingSignBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import top.sducraft.Settings;
 
-@Mixin(GrowingPlantBlock.class)
-public abstract class GrowingPlantBlockMixin  extends Block {
-    public GrowingPlantBlockMixin(Properties properties) {super(properties);}
+@Mixin(StandingSignBlock.class)
+public abstract class StangingSignBlcokMixin extends SignBlock {
+    protected StangingSignBlcokMixin(WoodType woodType, Properties properties) {super(woodType, properties);}
 
-    @Inject(method = "canSurvive",at=@At("HEAD"), cancellable = true)
+    @Inject(method = "canSurvive",at = @At("HEAD"), cancellable = true)
     protected void canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos, CallbackInfoReturnable<Boolean> cir) {
-        if (Settings.blockPlaceIgnoreCondition) {
+        if(Settings.blockPlaceIgnoreCondition){
             cir.setReturnValue(true);
         }
     }
