@@ -1,11 +1,7 @@
 package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
 
-import net.minecraft.core.Direction;
-import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.KelpPlantBlock;
-import net.minecraft.world.level.block.LiquidBlockContainer;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,7 +15,6 @@ public abstract class KelpPlantBlockMixin {
         if(Settings.blockPlaceIgnoreCondition){
             cir.setReturnValue(true);
         }
-
     }
 
 }

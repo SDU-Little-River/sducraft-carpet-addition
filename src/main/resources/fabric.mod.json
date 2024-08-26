@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "sca",
+  "id": "carpet-sducraft-addition",
   "version": "${version}",
   "name": "sducraft-carpet-addition",
   "description": "A carpet addition for SDUCraft",
   "authors": [
-    "Forgot-Dream"
+    "Forgot-Dream",
+    "xhbsh"
   ],
   "contact": {
     "repo": "https://github.com/Forgot-Dream/sducraft-carpet-addition"

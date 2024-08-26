@@ -1,9 +1,11 @@
 package top.sducraft.mixins.block_sdu.BlockPlaceIgnoreCondition;
 
 import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.KelpBlock;
 import net.minecraft.world.level.block.LiquidBlockContainer;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
@@ -30,8 +32,11 @@ public abstract class KelpBlockMixin extends GrowingPlantHeadBlock implements Li
             cir.setReturnValue(true);
         }
     }
-    @Inject(method = "getFluidState",at=@At("HEAD"), cancellable = true)
-    protected void getFluidState(BlockState blockState, CallbackInfoReturnable<FluidState> cir) {
-        cir.setReturnValue(blockState.getFluidState());
+
+    @Inject(method = "getStateForPlacement",at=@At("HEAD"), cancellable = true)
+    protected void getStateForPlacement(BlockPlaceContext blockPlaceContext, CallbackInfoReturnable<BlockState> cir) {
+        if(Settings.blockPlaceIgnoreCondition) {
+            cir.setReturnValue(super.getStateForPlacement(blockPlaceContext));
+        }
     }
 }

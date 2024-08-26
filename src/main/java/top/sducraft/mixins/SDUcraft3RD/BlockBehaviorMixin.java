@@ -26,6 +26,5 @@ public abstract class BlockBehaviorMixin implements FeatureElement {
                 cir.setReturnValue(1.6F);
             }
         }
-
     }
 }
